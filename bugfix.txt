@@ -1,0 +1,45 @@
+🔧 Explication du bug et solution – Shell integration: Injection failed to activate
+
+
+🐞 Problème (Bug) :
+
+Lorsque vous ouvrez un terminal PowerShell dans Visual Studio Code, un message s’affiche :
+
+> "Shell integration: Injection failed to activate"
+
+Cela signifie que l’intégration entre le terminal de VS Code et PowerShell a échoué. Elle est nécessaire pour que certaines extensions (comme Python) puissent personnaliser le terminal, exécuter des scripts ou interagir avec l’environnement.
+
+Ce bug peut apparaître à cause de :
+- L’absence de droits administrateur
+- Une version incompatible de PowerShell
+- Des fichiers d’intégration corrompus
+- Un antivirus ou pare-feu qui bloque le script shellIntegration.ps1
+
+---
+
+✅ Solution :
+
+1. Relancer le terminal proprement  
+   - Cliquez sur "Relaunch Terminal" dans le message d’erreur.
+   - Ou utilisez la commande :  
+     
+     Ctrl + Shift + P → Reload Window
+     
+
+2. Lancer VS Code en mode administrateur  
+   - Fermez VS Code.
+   - Clic droit sur l’icône > "Exécuter en tant qu’administrateur".
+
+3. Mettre à jour PowerShell (optionnel mais conseillé)  
+   - Ouvrez une invite de commande et tapez :  
+     
+     winget install --id Microsoft.PowerShell
+     
+4. Changer de terminal par défaut si nécessaire  
+   - Menu Terminal > Configurer le profil par défaut
+   - Sélectionnez un autre terminal (comme Command Prompt ou Git Bash) si PowerShell pose problème.
+
+5. Vérifier et mettre à jour les extensions  
+   - En particulier l’extension Python qui peut nécessiter cette intégration shell.
+
+Tu peux tester à nouveau après ces étapes. Si le bug persiste, je peux t’aider à reconfigurer le terminal manuellement.
