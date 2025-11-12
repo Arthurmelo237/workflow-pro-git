@@ -1,0 +1,5 @@
+- Creation d'un nouveau depot (repository)
+- Creation d'un dossier locale et lier notre depot
+- Creation des branches
+- Ajouter des fonctionalite et telecharger vers notre depot
+- Ensuite Fusion des branches
